@@ -1,0 +1,8 @@
+ifdef(`__feed',`</description></item>',`ifdef(`__timestamp',`<p class="timestamp">
+    ifelse(__id,1,,`<a href="decr(__id).html">&laquo; older</a> |')
+    <a href="__id.html">__timestamp</a>
+    ifelse(__latest,__id,,`| <a href="incr(__id).html">newer &raquo;</a></p>')')
+include(`src/nav.html')
+</body>
+</html>
+')
