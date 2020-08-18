@@ -1,7 +1,7 @@
 dnl -*- html -*-
 define(__title, `All posts')dnl
 define(__subtitle, `Howz about a nice long list of everything I done did write here right here')dnl
-include(src/header.html)
+include(src/partials/header.html)
 define(`fordown',`ifelse($#,0,``$0'',`ifelse(eval($2>=$3),1,
   `pushdef(`$1',$2)$4`'popdef(`$1')$0(`$1',decr($2),$3,`$4')')')')
 define(`__year', esyscmd(`date "+%Y"'))dnl
@@ -20,4 +20,4 @@ fordown(`__i',__latest,1,
 </ul>
 </div>
 undefine(`__timestamp')
-include(src/footer.html)
+include(src/partials/footer.html)

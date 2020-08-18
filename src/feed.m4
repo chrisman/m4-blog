@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <rss version="2.0">
   <channel>
-    <title>Dozens and Dragons</title>
-    <link>https://dozensanddragons.neocities.com</link>
-    <description>ttrpg blog</description>
+    <title>FIXME</title>
+    <link>FIXME</link>
+    <description>FIXME</description>
 define(__feed)dnl
 define(`for',`ifelse($#,0,``$0'',`ifelse(eval($2>=$3),1,
     `pushdef(`$1',$2)$4`'popdef(`$1')$0(`$1',decr($2),$3,`$4')')')')

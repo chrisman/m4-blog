@@ -1,11 +1,11 @@
 define(__title, `Contact')dnl
-include(src/header.html)
+include(src/partials/header.html)
 changequote(<!,!>)dnl Or else `code blocks` confuse m4
 
-I like recieving comments and feedback. Feel free to email me or find me on mastodon.
+Reach out and let me know how you're doing!
 
-- ✉️  dozens@tilde.team
-- 🐘 @dozens@tiny.tilde.website
+- ✉️  name@email.oag
+- 🐘 @handle@mastodon.instance
 
 changequote`'dnl change quotes `back to default'
-include(src/footer.html)
+include(src/partials/footer.html)
