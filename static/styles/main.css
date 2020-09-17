@@ -116,7 +116,7 @@ pre, code {
   color: tomato;
   letter-spacing: 0.5px;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.25;
   overflow-y: scroll;
 }
 
@@ -127,4 +127,18 @@ pre, code {
  */
 dd {
   margin: 0 0 0.5em 2em;
+}
+
+
+/***
+ * Utilities
+ * =========
+ */
+.u-fullwidth {
+  left: 50%;
+  position: relative;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
 }
