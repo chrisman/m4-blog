@@ -2,11 +2,11 @@
 
 this is boilerplate for a static blog generator that uses m4 and pandoc.
 
-[read the blog post about it](https://chrisman.github.io/9.html)
-
 ## About
 
 I've started using this structure for a couple different blogs now, so I thought I'd make a boilerplate for myself and in case anybody else finds it useful.
+
+[Read the blog post about it.](https://chrisman.github.io/9.html)
 
 It uses m4 for includes and macros, and pandoc for markdown -> HTML conversion.
 
@@ -62,23 +62,14 @@ cons:
 
 ## Getting started
 
-There are some places you will need to edit and add your own information. I've tried to mark each of these places with a `FIXME`.
+1. Create a new project called `my-blog`: `npx tiged chrisman/m4-blog my-blog`
 
-`$ ag FIXME`
+2. Fixups: There are some places you will need to edit and add your own information. I've tried to mark each of these places with a `FIXME`. So definitely run a `grep -r FIXME .` and correct all those.
 
-```
-Makefile:17:	rsync -azP out/ FIXME:some_site
-src/feed.m4:4:    <title>FIXME</title>
-src/feed.m4:5:    <link>FIXME</link>
-src/feed.m4:6:    <description>FIXME</description>
-src/header.html:3:<link>https://FIXME.com/__id.html</link>
-src/header.html:6:<head> <meta charset="utf-8"> <title>FIXME</title> <meta name="author" content="FIXME:your_name"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="FIXME:site_title"> <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet"> <link rel="stylesheet" href="styles/main.css"> <link rel="index" href="/list" /> ifdef(`__timestamp', `ifelse(__id,1,,`<link rel="prev" href="/decr(__id)">')') ifdef(`__timestamp', `ifelse(__id,__latest,,`<link rel="next" href="/incr(__id)">')') </head>
-src/header.html:9:  <div>FIXME my site name</div>
-```
 
 ## Blogging
 
-1. Increment the number in LATEST. Start `./src/<number>.m4`
+1. Increment the number in LATEST and edit `src/<number>.m4`
 
 2. (optional) start `make watch` in one terminal, and `make serve` in another. Then you can open up http://localhost:3001 to see your changes. The watcher will rebuild files on save. You just need to refresh your browser.
 
